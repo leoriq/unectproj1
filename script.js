@@ -1,5 +1,5 @@
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("interrogacao");
+var btn = document.getElementById("iopened");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal 

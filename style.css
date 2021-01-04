@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-
 body {
     min-width: 1188px;
     min-height: 410px;
@@ -13,11 +12,31 @@ h1, h2, h3, p {
     padding-bottom: 8px;
 }
 
-#interrogacao {
+a {
+    text-decoration: none;
+}
+
+.interrogacao {
     position: fixed;
+    width: 50px;
+    height: 50px;
     right: 100px;
     bottom: 70px;
-    z-index: 1;
+    z-index: 2;
+}
+
+#iopened {
+    display: none;
+    width: 191px;
+    z-index: 2;
+}
+
+.interrogacao:hover+#iopened {
+    display: block;
+}
+
+#iopened:hover {
+    display: block;
 }
 
 /* Modal */
@@ -25,7 +44,7 @@ h1, h2, h3, p {
 .modal {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -250,7 +269,7 @@ input[type=submit] {
     color: #226ED8;
 }
 
-#increver-button {
+#inscrever-button {
     position: absolute;
     width: 137px;
     height: 45px;
@@ -262,7 +281,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-#increver-button:hover {
+#inscrever-button:hover {
     background: none;
     border: 1px solid #226ED8;
     box-sizing: border-box;
@@ -668,8 +687,9 @@ input[type=submit] {
 }
 
 #site {
-    position: absolute;
-    left: 124px;
+    position: relative;
+    display: inline;
+    left: 14px;
 }
 
 #emojis-div {
